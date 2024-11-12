@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" tabClosingPolicy="ALL_TABS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="radiotherapysuite.LoadPageController">
+  <tabs>
+    <Tab fx:id="Home" closable="false" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 26.2431% 59.4787%, radius 50.0%, #ebff12 0.0%, #b91717 100.0%);">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: cyan;">
+               <children>
+                  <ImageView layoutX="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@images/mask.jpg" />
+                     </image>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <GridPane layoutX="10.0" layoutY="3.0" prefHeight="662.0" prefWidth="784.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="3.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addLinac" prefHeight="184.0" prefWidth="274.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #ff0000 0.0%, #1cdab4 100.0%);" text="LINAC QA" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman" size="33.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </InnerShadow>
+                           </effect>
+                           <GridPane.margin>
+                              <Insets left="60.0" right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addSSDNB" prefHeight="184.0" prefWidth="288.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #31ad44 100.0%);" text="SSD OPEN FIELD" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="33.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </InnerShadow>
+                           </effect>
+                           <GridPane.margin>
+                              <Insets left="60.0" right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button layoutX="295.0" layoutY="10.0" mnemonicParsing="false" onAction="#addSADB" prefHeight="174.0" prefWidth="273.0" style="-fx-background-color: linear-gradient(from 78.673% 100.0% to 89.0995% 56.872%, reflect, #3473b2 0.0%, #000000 53.3537%, #796e6e 79.1946%, #796e6e 100.0%);" text="SAD BLOCK" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="33.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </InnerShadow>
+                           </effect>
+                           <GridPane.margin>
+                              <Insets bottom="30.0" left="60.0" right="10.0" top="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addSSDB" prefHeight="184.0" prefWidth="272.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #313cad 100.0%);" text="SSD BLOCK" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman" size="33.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </InnerShadow>
+                           </effect>
+                           <GridPane.margin>
+                              <Insets left="60.0" right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addSADNBW" prefHeight="184.0" prefWidth="287.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #a1a434 100.0%);" text="SAD NO BLOCK WEDGE" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman" size="33.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </InnerShadow>
+                           </effect>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="30.0" top="30.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets left="60.0" right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button contentDisplay="CENTER" layoutX="295.0" layoutY="176.0" mnemonicParsing="false" onAction="#addSADNB" prefHeight="184.0" prefWidth="291.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #ae3030 100.0%);" text="SAD OPEN FIELD" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="33.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </InnerShadow>
+                           </effect>
+                           <GridPane.margin>
+                              <Insets left="60.0" right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </AnchorPane>
+         </content>
+         <graphic>
+            <Label text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Courier New Bold" size="16.0" />
+               </font>
+            </Label>
+         </graphic>
+    </Tab>
+      <Tab fx:id="qaTab" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #ff0000 0.0%, #1cdab4 100.0%);">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #ff0000 0.0%, #1cdab4 100.0%);">
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="LINAC Quality Assurance" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="35.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Temperature" textFill="#f8f8f8" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="T1" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" promptText="T1" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <TextField fx:id="T2" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" promptText="T2" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Pressure" textFill="#f8f8f8" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="P1" alignment="CENTER" prefWidth="200.0" promptText="P1" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <TextField fx:id="P2" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0" promptText="P2" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="800.0">
+                     <children>
+                        <HBox prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="113.0" prefWidth="800.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Neg 3 values" textFill="#f8f8f8">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                       <children>
+                                          <TextField fx:id="neg31" alignment="CENTER" prefHeight="40.0" prefWidth="73.0" promptText="-3₁">
+                                             <font>
+                                                <Font name="Courier New" size="21.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="60.0" />
+                                             </HBox.margin>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </TextField>
+                                          <TextField fx:id="neg32" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="73.0" promptText="-3₂">
+                                             <font>
+                                                <Font name="Courier New" size="21.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="60.0" />
+                                             </HBox.margin>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="113.0" prefWidth="800.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="0 values" textFill="#f8f8f8">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                       <children>
+                                          <TextField fx:id="zero1" alignment="CENTER" prefHeight="40.0" prefWidth="73.0" promptText="-3₁">
+                                             <font>
+                                                <Font name="Courier New" size="21.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="60.0" />
+                                             </HBox.margin>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </TextField>
+                                          <TextField fx:id="zero2" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="73.0" promptText="-3₂">
+                                             <font>
+                                                <Font name="Courier New" size="21.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="60.0" />
+                                             </HBox.margin>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="410.0" layoutY="10.0" prefHeight="113.0" prefWidth="800.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Pos 3 values" textFill="#f8f8f8">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                       <children>
+                                          <TextField fx:id="pos31" alignment="CENTER" prefHeight="40.0" prefWidth="73.0" promptText="-3₁">
+                                             <font>
+                                                <Font name="Courier New" size="21.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="60.0" />
+                                             </HBox.margin>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </TextField>
+                                          <TextField fx:id="pos32" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="73.0" promptText="-3₂">
+                                             <font>
+                                                <Font name="Courier New" size="21.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="60.0" />
+                                             </HBox.margin>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="136.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="C-ɜ" textFill="#f5f5f5">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="negC" alignment="CENTER" editable="false" opacity="0.73" prefHeight="40.0" promptText="C-ɜ">
+                                       <font>
+                                          <Font name="Courier New" size="21.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="360.0" layoutY="10.0" prefHeight="200.0" prefWidth="136.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Co" textFill="#f5f5f5">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="c0" alignment="CENTER" editable="false" opacity="0.73" prefHeight="40.0" prefWidth="115.0" promptText="Co">
+                                       <font>
+                                          <Font name="Courier New" size="21.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="425.0" layoutY="10.0" prefHeight="200.0" prefWidth="136.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="C+ɜ" textFill="#f5f5f5">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="c3" alignment="CENTER" editable="false" opacity="0.73" prefHeight="40.0" prefWidth="91.0" promptText="C+ɜ">
+                                       <font>
+                                          <Font name="Courier New" size="21.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="60.0" right="60.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="800.0" VBox.vgrow="SOMETIMES">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="80.0" right="80.0" top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <Label text="\%ERROR" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ERROR" editable="false" opacity="0.73" promptText="\%Error" style="-fx-text-fill: red;">
+                                       <font>
+                                          <Font name="Courier New" size="21.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#qaCalculation" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: grey; -fx-background-radius: 8pc;" text="Calculate" textFill="#ebebeb">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearLinac" style="-fx-background-color: red;" text="Clear" textFill="WHITE">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Courier New Bold" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+         <graphic>
+            <Label text="LINAC" textFill="WHITE">
+               <font>
+                  <Font name="Courier New Bold" size="16.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Tab>
+      <Tab fx:id="SADNB" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #ae3030 100.0%);">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #ae3030 100.0%);">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="SAD OPEN FIELD" textFill="#ffeeee">
+                     <font>
+                        <Font name="Times New Roman" size="35.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Field Sizes" textFill="#f8f8f8" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="sadnb_x" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" promptText="X" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <TextField fx:id="sadnb_y" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" promptText="Y" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Depth" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnb_depth" alignment="CENTER" promptText="Depth">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="360.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Dose" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnb_dose" alignment="CENTER" promptText="Dose">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="120.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="92.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Equivalent Field Size" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnb_eqfs" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="SCP" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnb_scp" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="82.0" prefHeight="131.0" prefWidth="800.0" spacing="20.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="TMR" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnb_tmr" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="280.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="DMax" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnb_dmax" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="82.0" prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Treatment Time" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnb_time" alignment="CENTER" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#sadOpenFieldCalculation" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: grey; -fx-background-radius: 8pc;" text="Calculate" textFill="#ebebeb">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearSADNB" style="-fx-background-color: red;" text="Clear" textFill="WHITE">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Courier New Bold" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+         <graphic>
+            <Label text="SAD NO BLOCK" textFill="WHITE">
+               <font>
+                  <Font name="Courier New Bold" size="16.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Tab>
+      <Tab fx:id="SADB" style="-fx-background-color: linear-gradient(from 78.673% 100.0% to 89.0995% 56.872%, reflect, #3473b2 0.0%, #000000 53.3537%, #796e6e 79.1946%, #796e6e 100.0%);">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(from 78.673% 100.0% to 89.0995% 56.872%, reflect, #3473b2 0.0%, #000000 53.3537%, #796e6e 79.1946%, #796e6e 100.0%);">
+               <children>
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="262.0" text="SAD BLOCK" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="35.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Field Sizes" textFill="#f8f8f8" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="sadb_x" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" promptText="X" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <TextField fx:id="sadb_y" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" promptText="Y" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Depth" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadb_depth" alignment="CENTER" promptText="Depth">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="360.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Area" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadb_area" alignment="CENTER" promptText="Area">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="130.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Dose" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadb_dose" alignment="CENTER" promptText="Dose">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0" spacing="30.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="Equivalent Field Size" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sadb_eqfs" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="280.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="Reduced Field Size" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sadb_reduced" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0" spacing="5.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="SCP" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sadb_scp" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="100.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" layoutX="280.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="161.0" text="Block Factors" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox fx:id="sadb_trayfac" layoutX="63.0" layoutY="3.0" mnemonicParsing="false" onAction="#setSadbFactor" text="Tray Factor" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="16.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="sadb_belly" layoutX="135.0" layoutY="21.0" mnemonicParsing="false" onAction="#setSadbFactor" text="Belly Board" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="16.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="sadb_nofac" layoutY="21.0" mnemonicParsing="false" onAction="#setSadbFactor" text="None" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="16.0" />
+                                       </font>
+                                    </CheckBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="120.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="TMR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sadb_tmr" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="43.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="258.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="DMax" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sadb_dmax" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="Treatment Time" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sadb_time" alignment="CENTER" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="43.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#sadBlockCalculation" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: grey; -fx-background-radius: 8pc;" text="Calculate" textFill="#ebebeb">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <VBox.margin>
+                              <Insets right="43.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearSADBlock" style="-fx-background-color: red;" text="Clear" textFill="WHITE">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Courier New Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="43.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+         <graphic>
+            <Label text="SAD BLOCK" textFill="WHITE">
+               <font>
+                  <Font name="Courier New Bold" size="16.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Tab>
+      <Tab fx:id="SSDNB" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #31ad44 100.0%);">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #31ad44 100.0%);">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="SSD OPEN FIELD" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="35.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Field Sizes" textFill="#f8f8f8" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="ssdnb_x" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" promptText="X" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <TextField fx:id="ssdnb_y" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" promptText="Y" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Depth" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdnb_depth" alignment="CENTER" promptText="Depth">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="360.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Dose" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdnb_dose" alignment="CENTER" promptText="Dose">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="120.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="92.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Equivalent Field Size" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdnb_eqfs" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="131.0" prefWidth="800.0" spacing="20.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="SCP" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdnb_scp" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="255.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="82.0" prefHeight="131.0" prefWidth="800.0" spacing="20.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="PDD" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdnb_pdd" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="280.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="DMax" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdnb_dmax" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="82.0" prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Treatment Time" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdnb_time" alignment="CENTER" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#ssdOpenFieldCalculation" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: grey; -fx-background-radius: 8pc;" text="Calculate" textFill="#ebebeb">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearSSDNB" style="-fx-background-color: red;" text="Clear" textFill="WHITE">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Courier New Bold" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+         <graphic>
+            <Label text="SSD NO BLOCK" textFill="WHITE">
+               <font>
+                  <Font name="Courier New Bold" size="16.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Tab>
+      <Tab fx:id="SSDB" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #313cad 100.0%);">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #313cad 100.0%);">
+               <children>
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="262.0" text="SSD BLOCK" textFill="#eeeeee">
+                     <font>
+                        <Font name="Times New Roman" size="35.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Field Sizes" textFill="#f8f8f8" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="ssdb_x" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" promptText="X" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <TextField fx:id="ssdb_y" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" promptText="Y" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Depth" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdb_depth" alignment="CENTER" promptText="Depth">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="360.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Area" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdb_area" alignment="CENTER" promptText="Area">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="130.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Dose" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ssdb_dose" alignment="CENTER" promptText="Dose">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0" spacing="30.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="Equivalent Field Size" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ssdb_eqfs" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="280.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="Reduced Field Size" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ssdb_reduced" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0" spacing="5.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="SCP" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ssdb_scp" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="100.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" layoutX="280.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="161.0" text="Block Factors" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox fx:id="ssdb_trayfac" layoutX="63.0" layoutY="3.0" mnemonicParsing="false" onAction="#setSsdbFactor" text="Tray Factor" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="16.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="ssdb_belly" layoutX="135.0" layoutY="21.0" mnemonicParsing="false" onAction="#setSsdbFactor" text="Belly Board" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="16.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="ssdb_nofac" layoutY="21.0" mnemonicParsing="false" onAction="#setSsdbFactor" text="None" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="16.0" />
+                                       </font>
+                                    </CheckBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="120.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="PDD" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ssdb_pdd" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="43.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="258.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="DMax" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ssdb_dmax" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                           <children>
+                              <Label alignment="CENTER" text="Treatment Time" textFill="WHITE">
+                                 <font>
+                                    <Font name="Courier New Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ssdb_time" alignment="CENTER" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <font>
+                                    <Font name="Courier New" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="43.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#ssdBlockCalculation" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: grey; -fx-background-radius: 8pc;" text="Calculate" textFill="#ebebeb">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <VBox.margin>
+                              <Insets right="43.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearSSDB" style="-fx-background-color: red;" text="Clear" textFill="WHITE">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Courier New Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="43.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></VBox>
+         </content>
+         <graphic>
+            <Label text="SSD BLOCK" textFill="WHITE">
+               <font>
+                  <Font name="Courier New Bold" size="16.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Tab>
+      <Tab fx:id="SADNBW" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #a1a434 100.0%);">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(from 42.1801% 52.1327% to 32.7014% 36.019%, reflect, #000000 0.0%, #a1a434 100.0%);">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="SAD OPEN FIELD WEDGE" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="35.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Field Sizes" textFill="#f8f8f8" VBox.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="sadnbw_x" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" promptText="X" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <TextField fx:id="sadnbw_y" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" promptText="Y" HBox.hgrow="SOMETIMES">
+                                 <font>
+                                    <Font name="Courier New" size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="60.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="87.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Depth" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnbw_depth" alignment="CENTER" promptText="Depth">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="360.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Dose" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnbw_dose" alignment="CENTER" promptText="Dose">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="120.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="92.0" prefWidth="800.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Equivalent Field Size" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnbw_eqfs" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="131.0" prefWidth="800.0" spacing="20.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="SCP" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnbw_scp" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="255.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="259.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="161.0" text="WEDGES" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <CheckBox fx:id="sadnb_w301" layoutX="84.0" layoutY="3.0" mnemonicParsing="false" onAction="#setSADWedgeValue" text="30" textFill="WHITE">
+                                             <font>
+                                                <Font name="Courier New Bold" size="16.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="sadnb_w151" layoutY="3.0" mnemonicParsing="false" onAction="#setSADWedgeValue" text="15" textFill="WHITE">
+                                             <font>
+                                                <Font name="Courier New Bold" size="16.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="sadnb_w451" layoutX="48.0" layoutY="23.0" mnemonicParsing="false" onAction="#setSADWedgeValue" text="45" textFill="WHITE">
+                                             <font>
+                                                <Font name="Courier New Bold" size="16.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="sadnb_w601" layoutX="141.0" layoutY="23.0" mnemonicParsing="false" onAction="#setSADWedgeValue" text="60" textFill="WHITE">
+                                             <font>
+                                                <Font name="Courier New Bold" size="16.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox fx:id="sadnb_wnone1" layoutX="183.0" layoutY="3.0" mnemonicParsing="false" onAction="#setSADWedgeValue" text="None" textFill="WHITE">
+                                             <font>
+                                                <Font name="Courier New Bold" size="16.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="82.0" prefHeight="131.0" prefWidth="800.0" spacing="20.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="TMR" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnbw_tmr" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="280.0" layoutY="20.0" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="DMax" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnbw_dmax" alignment="CENTER" editable="false" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="82.0" prefHeight="131.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Treatment Time" textFill="WHITE">
+                                       <font>
+                                          <Font name="Courier New Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sadnbw_time" alignment="CENTER" opacity="0.73" prefHeight="38.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font name="Courier New" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#sadOpenWedgeFieldCalculation" prefHeight="50.0" prefWidth="192.0" style="-fx-background-color: grey; -fx-background-radius: 8pc;" text="Calculate" textFill="#ebebeb">
+                           <font>
+                              <Font name="Courier New Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearSADNNBW" style="-fx-background-color: red;" text="Clear" textFill="WHITE">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <DropShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Courier New Bold" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></VBox>
+         </content>
+         <graphic>
+            <Label text="SAD NO BLOCK WEDGE" textFill="WHITE">
+               <font>
+                  <Font name="Courier New Bold" size="16.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Tab>
+  </tabs>
+</TabPane>
